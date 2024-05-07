@@ -33,5 +33,5 @@ It work with WD1770 and WD1772 floppy disc controlllers.
 
 ![My image](QL_MiniTrump3.png)
 
-![My image](QL_miniTrump3_back.png)
+![My image](QL_MiniTrump3_back.png)
 
