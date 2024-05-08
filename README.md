@@ -1,6 +1,6 @@
 # SINCLAIR QL Mini Trump Card 3 Disk Interface
 
-(C) 2022 Alvaro Alea Fernandez
+(C) 2024 Alvaro Alea Fernandez
 
 License under: CERN Open Hardware Licence Version 2 - Strongly Reciprocal
 
