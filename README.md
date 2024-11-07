@@ -20,7 +20,7 @@ It's use standar AT cable (with a twist) and standar AT disc drives (drives conf
 
 ## Drawbacks
 
-But it do not have memory, you need a Memory Expansion, be aware that you should use only a 512Kb (total 640Kb) expansion, if you want to have a total of 896Kb (like the original trump card) you should use my expansion board, and connect after the trump card, also JP1 in this board and the equivalent jumper shall be soldered to allow the pagin mechanism of the Trump Card.
+But it do not have memory, you need a Memory Expansion, be aware that you should use only a 512Kb (total 640Kb) expansion, if you want to have a total of 896Kb (like the original trump card) you should use my expansion board, and connect after the trump card, also JP1 in this board and the equivalent jumper shall be soldered to allow the paging mechanism of the Trump Card.
 
 It only support 2 Disk Drive, no way to use 3 or 4 Drives
 
