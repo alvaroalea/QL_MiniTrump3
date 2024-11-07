@@ -12,7 +12,7 @@ U17CS = DSL * /A19 * /A18 * /A17 * A16 * A15 * A14 *  A13  ; 8Kb of I/O on 0x1E0
 ROMCS = DSL * /A19 * /A18 * /A17 *  A16 * /A15
       + DSL *  A19 *  A18 * /A17 * /A16 * /A15 * /P13
 
-; Disable the 32Kb of ROM, the 16Kb of I/O and the 3 x 256Kb pages of RAM
+; Disable the 32Kb of ROM, the 16Kb of I/O and the second copy of ROM when pagged.
 DSMC  = DSL * /A19 * /A18 * /A17 * A16 * /A15
       + DSL * /A19 * /A18 * /A17 * A16 *  A15 * A14
       + DSL *  A19 *  A18 * /A17 * /A16 * /A15 * /P13
@@ -37,18 +37,19 @@ CLKCT = DSL  ; this is a NOT because defined /DSL as input.
 ; Mechanism is described here: https://github.com/mamedev/mame/blob/master/src/mame/sinclair/ql.cpp
 
 ; We have a "Asyncronous Finite State Machine" using P13 and P16
-; It's Asyncronous because do not use the clock input, neither the registered part of the GAL16, instead use two simple RS flipflop.
+; It's Asyncronous because do not use the clock input, neither the registered part of the GAL16V8, instead use two simple RS flipflop.
 ; the generic ecuation for a RS flipflop is  /Q = R + /S * /Q
+; also note that RST is active low, so /S is RST
 ;
 ; STATE 0 - P13 = 1, P16 = 1 - Boot State after reset, 768Kb of RAM
 ;  -> to S1 (reset P13) P16=1 & 68K read position of memory over 0xC8nnnn (that is after ROM do initial RAM count and search for hardware)
 ;
 ; STATE 1 - P13 = 0; P16 = 1 - Rom in 0xC0000 place
-;   OK -> to S3 (reset P16) when 68K read 0xCnnnn position of memory (on jump to the final ROM position)
-;   OK -> to S0 (set P16, set P13) on reset
+;  -> to S3 (reset P16) when 68K read 0xCnnnn position of memory (on jump to the final ROM position)
+;  -> to S0 (set P16, set P13) on reset
 ;
 ; STATE 3 - P13 = 0; P16 = 0 - 768Kb of RAM, normal position, and Initial State?, depend on a good Reset Signal.
-;   OK -> to S0 (set P16, set P13) on reset
+;  -> to S0 (set P16, set P13) on reset
 ;
 ; /P13 indicate ROM in 0xC0000 (when 0), I'm aware that the explanation and the equations do not match, but I'm not fully understand the mechanism
 ;
