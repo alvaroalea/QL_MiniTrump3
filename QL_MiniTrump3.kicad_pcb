@@ -2672,9 +2672,9 @@
 				(xyz 0 0 0)
 			)
 		)
-		(model "/home/alvaro/kicadprojects/8bits_kicad_libraries/packages3d/DIN41612_Q_2x32_Female_RightAngle_THT.wrl"
+		(model "/home/alvaro/kicadprojects/8bits_kicad_libraries/packages3d/DIN41612_B_2x32_Male_RightAngle_THT.wrl"
 			(offset
-				(xyz 0 0 0)
+				(xyz -78.74 0 0)
 			)
 			(scale
 				(xyz 0.394 0.394 0.394)
@@ -3327,7 +3327,7 @@
 		(descr "Sinclair QL Computer/extension Conector, DIN41612 connector, type B, Horizontal, 2 rows 32 pins wide, https://www.hirose.com/en/product/document?clcode=CL0583-0044-4-72&productname=PCN10-64ACS-2.54DSA(72)&series=PCN10&documenttype=Catalog&lang=en&documentid=D49718_en")
 		(tags "DIN 41612 IEC 60603 B Sinclair QL Computer Extension")
 		(property "Reference" "J3"
-			(at -8.88 -2.54 180)
+			(at -8.88 -2.54 360)
 			(layer "F.SilkS")
 			(uuid "2ddf2d33-3807-4a31-b36f-a48531d39175")
 			(effects
@@ -3349,7 +3349,7 @@
 			)
 		)
 		(property "Footprint" "8bits:DIN41612_B_2x32_Male_Horizontal_THT"
-			(at 0 0 -90)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "48749f50-ba22-4e2a-85dd-f572ab1f3787")
@@ -3361,7 +3361,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6cb32153-214c-4b76-9a04-f887a4c779ac")
@@ -3373,7 +3373,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a1761e05-1267-4b1d-b2b9-cf3b484eb822")
@@ -4820,20 +4820,9 @@
 			(pintype "passive")
 			(uuid "856162a7-75c3-4482-a240-0b8be2408a39")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Connector_DIN.3dshapes/DIN41612_B_2x32_Male_Horizontal_THT.wrl"
+		(model "/home/alvaro/kicadprojects/8bits_kicad_libraries/packages3d/DIN41612_Q_2x32_Female_RightAngle_THT.wrl"
 			(offset
-				(xyz 0 0 0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 0)
-			)
-		)
-		(model "/home/alvaro/kicadprojects/8bits_kicad_libraries/packages3d/DIN41612_B_2x32_Male_RightAngle_THT.wrl"
-			(offset
-				(xyz 0 0 0)
+				(xyz 78.74 0 0)
 			)
 			(scale
 				(xyz 0.394 0.394 0.394)
@@ -14607,7 +14596,7 @@
 			(xy 131.445 44.323) (xy 201.422 44.323)
 		)
 		(height -3.9751)
-		(gr_text "69,9770 mm"
+		(gr_text "2,7550 in"
 			(at 166.4335 39.1979 0)
 			(layer "Cmts.User")
 			(uuid "0d8be1f1-ed88-4303-b017-dea122b87318")
@@ -14640,7 +14629,7 @@
 			(xy 201.422 44.323) (xy 201.422 143.383)
 		)
 		(height -13.335)
-		(gr_text "99,0600 mm"
+		(gr_text "3,9000 in"
 			(at 213.607 93.853 90)
 			(layer "Cmts.User")
 			(uuid "ad6ce347-e643-40ce-b204-0865aa79d78d")
